@@ -1,0 +1,33 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+    color: #424B54;
+}
+nav{
+    background-color: beige;
+    padding: 4px 4px;
+}
+body{
+    background-color: #FFFCEB;
+}
+
+
+ul.navbar{
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+    ul.navbar li {
+    color: #424B54;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    
+    }
+
+    ul.navbar li:hover {
+    color: #A4969B;
+    }
