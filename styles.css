@@ -1,10 +1,15 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 5px;
-    color: #424B54;
+
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #FFFCEB;
+    margin: 0;
+    padding: 0;
 }
+
+
 nav{
-    background-color: beige;
+    background-color: #FFFCEB;
     padding: 4px 4px;
 }
 body{
@@ -12,13 +17,15 @@ body{
 }
 
 
+
 ul.navbar{
+    list-style: none;
     display: flex;
     margin: 5px;
     padding: 5px;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1.5em;
+    gap: 30px;
 }
 
     ul.navbar li {
@@ -30,4 +37,8 @@ ul.navbar{
 
     ul.navbar li:hover {
     color: #A4969B;
+    }
+    ul.navbar :visited{
+        text-emphasis: none;
+
     }
