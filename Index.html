@@ -1,26 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stuff the browser needs to know -->
+    <meta charset="UTF-8"> <!-- Makes letters show up right -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Works on phones -->
+     <!-- Name:Joshua Oladokun
+Course: Web Development 10S
+Teacher: Ms. Hoitink
+School: Pembina Trails Collegiate (PTC)
+Date Last Modified: May 25-->
     <title>Explore Naawi-Oodena</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!--  style sheet -->
 </head>
 <body>
-    <main>
-        <nav>
+    <!-- Top part of the page -->
+    <header tabindex="0"> <!-- Makes this part focusable with keyboard -->
+        <h1 class="fade-in">Explore Naawi-Oodena</h1>
+        
+        <!-- Navigation buttons -->
+        <nav class="sticky-nav">
             <ul class="navbar">
-                <li>Home</li>
-                <li><a href="recreation.html">Recreation</a></li>
-                <li>Commercial use</li>
-                <li>Education</li>
-                <li>Mixed use village</li>
-                <li>Our Partners</li>
-                <li> About us</li>
+                <!-- Clickable links to other pages -->
+                <li><a href="index.html" class="nav-link" tabindex="0">Home</a></li> <!-- tabindex=0 makes it keyboard-friendly -->
+                <li><a href="community.html" class="nav-link" tabindex="0">Our Community</a></li>
+                <li><a href="culture.html" class="nav-link" tabindex="0">Our Culture</a></li>
+                <li><a href="Contact-us.html" class="nav-link" tabindex="0">Contact us</a></li>
             </ul>
         </nav>
-        <h1 style="text-align: center;">Explore Naawi-Oodena</h1>
-        
+    </header>
+
+    <!-- Main stuff in the middle -->
+    <main tabindex="0"> <!-- Can tab to this whole section -->
+        <article class="main-content">
+            <!-- First big info section -->
+            <section class="content-section slide-up" tabindex="0">
+                <h2>What is Naawi-Oodena</h2>
+                <div class="paragraph-container">
+                    <p class="lead-paragraph">Naawi-Oodena, means Four Hearts in Ojibwe.It is the newest urban Indigenous community in Winnipeg, Manitoba.</p> <!-- Big important sentence up here -->
+
+                    <!--  Info  -->
+                    <div class="animated-card" tabindex="0">
+                        <p>This making of this represents a historic partnership between Treaty One Nation and Canada Lands Company. It is transforming former military lands into a colorful and unique Indigenous space.</p>
+                    </div>
+
+                    <!-- Another cool info box -->
+                    <div class="animated-card" tabindex="0">
+                        <p>BFrom a legal process that lasted over 20 years, Naawi-Oodena is Canada's largest urban reserve. The community's name reflects th unity ofe seven Treaty One Nations working together with their urban relatives dubbed the name Four hearts.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video section -->
+            <section class="video-section scale-in" tabindex="0">
+                <h2>The day we officially became a reserve (All the way back in 2023)</h2>
+                <div class="video-wrapper">
+                    <!-- YouTube video box -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7yDhtS_gC-4?si=xgw3-XmGgud-aN6l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen tabindex="0"></iframe>
+                    <!-- Backup link just in case -->
+                    <a href="https://www.youtube.com/watch?v=7yDhtS_gC-4" tabindex="0">Link to video</a>
+                </div>
+            </section>
+        </article>
     </main>
+
+    <!-- Bottom part of the page -->
+    <footer class="site-footer" tabindex="0">
+        <div class="footer-content">
+            <!-- Partner logos -->
+            <div class="partner-logos">
+                <img src="Images/download (1).png" alt="Treaty One Nation" class="logo-hover" tabindex="0"> <!-- Partner logo 1 -->
+                <img src="Images/download.png" alt="Canada Lands Company" class="logo-hover" tabindex="0"> <!-- Partner logo 2 -->
+            </div>
+            <!-- Copyright text -->
+            <p> @2040 Naawi-Oodena. All rights reserved.</p>
+        </div>
+        <p>Link to my sources</p>
+        <a href="https://treaty1.ca/">Treaty 1</a>
+        <a href="https://www.clc-sic.ca/">Canada Lands</a>
+        <a href="https://www.clc-sic.ca/">Master Pdf</a>
+    </footer>
 </body>
 </html>

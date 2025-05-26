@@ -1,44 +1,555 @@
-body{
 
-    font-family: 'Segoe UI', Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #FFFCEB;
+:root {/* CSS Variables and whyi chose these colors
+    I chose light beige becuase it really make a nice color forlight mode and is really good for warmth and neutruality.
+    I chose blue gray becuase it gives beige a more stael and modern aesthetic.
+    I chose my accent becuase its not too bold, but gives personality. It gives a liitle bit of eveything
+    I chose rosewood because it gives that retro feel I want to my website that I want.*/
+    --light-bg: #FFFCEB;
+    --dark-text: #424B54;
+    --nav-accent: #A4969B;
+    --primary: #2D3047;
+    --secondary: #8B575C;
+    --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+h1{
+    background-color: #2D3047;
+    color: #FFFCEB;
+     gap: 32px;
+    padding: 0;
     margin: 0;
+
+}
+
+body {
+    font-family: 'Segoe UI', system-ui;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-image: linear-gradient(rgba(255, 252, 235, 0.9), rgba(255, 252, 235, 0.7)), url(Images/82887432-67c8-4d05-b317-233d7cbf65f8.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    
+}
+/* Navigation */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background: var(--primary);
+    z-index: 1000;
+    padding: 16px 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-link {
+    color: var(--light-bg);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--nav-accent);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+ul{
+    list-style: none;
+}
+
+/* Content Sections */
+.content-section {
+    max-width: 800px;
+    margin: 64px auto;
+    padding: 32px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.animated-card {
+    padding: 24px;
+    margin: 32px 0;
+    border-left: 4px solid var(--nav-accent);
+    background: linear-gradient(to right, rgba(164,150,155,0.05), transparent);
+    transition: var(--transition);
+}
+
+.animated-card:hover {
+    transform: translateX(10px);
+    box-shadow: 2px 4px 15px rgba(0,0,0,0.05);
+}
+
+.video-wrapper {
+    display: flex;
+    position: relative;
+    padding-bottom: 56.25%;
+    margin: 4rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    transform: translateZ(0);
+    transition: var(--transition);
+}
+
+.video-wrapper:hover {
+    transform: scale(1.02);
+}
+/*Css for community page and culture(I copied all the classes)*/
+
+.community-hero {
+    background: linear-gradient(rgba(45,48,71,0.8), rgba(45,48,71,0.8)),
+                url('community-bg.jpg') center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.housing-card {
+    background: rgba(255,255,255,0.9);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.housing-card:hover {
+    transform: translateY(-5px);
+}
+
+.commercial-grid, .amenities-grid, .culture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.commercial-card, .culture-spotlight {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.commercial-card img, .culture-spotlight img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.amenity {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #A4969B;
+}
+
+
+.image-container {
+    height: 250px;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    margin: 0  20px ;
+}
+
+.housing-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.housing-image:hover {
+    transform: scale(1.05);
+}
+
+.housing-card {
     padding: 0;
 }
 
-
-nav{
-    background-color: #FFFCEB;
-    padding: 4px 4px;
-}
-body{
-    background-color: #FFFCEB;
+.housing-card h4 {
+    padding: 0 20px;
 }
 
-
-
-ul.navbar{
-    list-style: none;
-    display: flex;
-    margin: 5px;
-    padding: 5px;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+.housing-card ul {
+    padding: 0 20px 20px 20px;
 }
 
-    ul.navbar li {
-    color: #424B54;
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.amenity-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    aspect-ratio: 4/3;
+}
+
+.amenity-card:hover {
+    transform: translateY(-5px);
+}
+
+.amenity-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.amenity-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(45,48,71,0.8);
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+/* Contact Page */
+
+.contact-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-form {
+    background: rgba(255,255,255,0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--nav-accent);
+    border-radius: 6px;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+#subject{
+    color: var(--dark-text);
+   font-family: 'Segoe UI', system-ui;
+}
+
+.submit-btn {
+    background: var(--primary);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.contact-info {
+    background: rgba(255,255,255,0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.info-card {
+    background: var(--light-bg);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.info-card p {
+    margin: 15px 0;
+}
+
+.map-container {
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+.culture-hero {
+    background: linear-gradient(rgba(45,48,71,0.8), rgba(45,48,71,0.8)),
+                url('images/culture-bg.jpg') center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.cultural-pillars {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.pillar-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 40px 0;
+    align-items: center;
+}
+
+.pillar-card.reverse {
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+}
+
+.pillar-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.pillar-content {
+    padding: 20px;
+    background: rgba(255,252,235,0.9);
+    border-radius: 8px;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.event-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-card h4 {
+    background: rgba(45,48,71,0.8);
+    color: white;
+    padding: 15px;
+    margin: 0;
+}
+
+/* Footer */
+.site-footer {
+    background: var(--primary);
+    color:#FFFCEB;
+    padding: 4rem 2rem;
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.logo-hover {
+    height: 60px;
+    opacity: 0.9;
+    transition: var(--transition);
+}
+
+.logo-hover:hover {
+    transform: translateY(-3px);
+    opacity: 1;
+}
+
+.footer-text {
+    margin-top: 2rem;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.slide-up {
+    animation: slideUp 0.8s ease-out 0.2s backwards;
+}
+
+.scale-in {
+    animation: scaleIn 0.6s ease-out 0.4s backwards;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
     
+    .content-section {
+        padding: 1.5rem;
+        margin: 2rem auto;
     }
+    
+    .animated-card {
+        padding: 1rem;
+    }
+}
 
-    ul.navbar li:hover {
-    color: #A4969B;
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+        background-image: linear-gradient(rgba(255, 252, 235, 0.95), rgba(255, 252, 235, 0.85)), url(Images/mobile-bg.jpg);
     }
-    ul.navbar :visited{
-        text-emphasis: none;
+}
+@media (max-width: 768px) {
+    .image-container {
+        height: 200px;
+        margin: -15px -15px 15px -15px;
+    }
+}
 
+
+@media (max-width: 768px) {
+    .grid-2col {
+        grid-template-columns: 1fr;
     }
+    
+    .community-hero {
+        height: 300px;
+    }
+    
+    .commercial-card img, .culture-spotlight img {
+        height: 150px;
+    }
+}
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form, .contact-info {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .amenities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .amenity-card {
+        aspect-ratio: unset;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pillar-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .pillar-card.reverse {
+        direction: ltr;
+    }
+    
+    .pillar-card img {
+        height: 200px;
+    }
+    
+    .culture-hero {
+        height: 300px;
+    }
+}

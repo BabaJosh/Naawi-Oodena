@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Stuff browsers need to know  -->
+    <meta charset="UTF-8"> <!-- Makes letters show right -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Works on phones  -->
+    <title>Contact Naawi-Oodena</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Our style sheet  -->
+</head>
+<body>
+    <!-- Top part of the page  -->
+    <header tabindex="0"> <!-- Can focus with keyboard  -->
+        <h1>Contact Us</h1>
+        
+        <!-- Navigation menu  -->
+        <nav class="sticky-nav">
+            <ul class="navbar">
+                <li><a href="index.html" class="nav-link" tabindex="0">Home</a></li> <!-- Clickable link  -->
+                <li><a href="community.html" class="nav-link" tabindex="0">Our Community</a></li>
+                <li><a href="culture.html" class="nav-link" tabindex="0">Our Culture</a></li>
+                <li><a href="Contact-us.html" class="nav-link" tabindex="0">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content area  -->
+    <main tabindex="0"> <!-- Whole section focusable -->
+        <section class="contact-section" tabindex="0">
+            <div class="contact-container">
+                <!-- Left side - Form  -->
+                <div class="contact-form" tabindex="0">
+                    <h2>Get in Touch</h2>
+                    <form>
+                        <!-- Name input  -->
+                        <div class="form-group">
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name" name="name" required tabindex="0">
+                        </div>
+                        
+                        <!-- Email input  -->
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required tabindex="0">
+                        </div>
+                        
+                        <!-- Dropdown menu  -->
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <select id="subject" name="subject" tabindex="0">
+                                <option value="general">General Inquiry</option>
+                                <option value="housing">Housing Information</option>
+                                <option value="business">Business Opportunities</option>
+                                <option value="cultural">Cultural Programs</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Message box  -->
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required tabindex="0"></textarea>
+                        </div>
+                        
+                        <!-- Send button  -->
+                        <button type="submit" class="submit-btn" tabindex="0">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Right side - Info  -->
+                <div class="contact-info" tabindex="0">
+                    <h3>Visit Us</h3>
+                    <!-- Address card  -->
+                    <div class="info-card" tabindex="0">
+                        <p>50 Fontier Trail Winnipeg, MB</p>
+                        <p>(204) 555-0199</p>
+                        <p>Explore@naawioodena.ca</p>
+                    </div>
+                    <!-- Google map  -->
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2575.3298195946377!2d-97.18714012446796!3d49.79866673408041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea75c252308581%3A0x1d362ebf1ecd88ef!2s50%20Frontier%20Trl%2C%20Winnipeg%2C%20MB%20R3Y%202H1!5e0!3m2!1sen!2sca!4v1748234870794!5m2!1sen!2sca" 
+                                width="600" 
+                                height="450" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                tabindex="0"> <!-- Interactive map -->
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom section ⬇ -->
+    <footer class="site-footer" tabindex="0">
+        <div class="footer-content">
+            <!-- Partner logos  -->
+            <div class="partner-logos">
+                <img src="Images/download (1).png" 
+                     alt="Treaty One Nation" 
+                     class="logo-hover" 
+                     tabindex="0"> <!-- Clickable logo -->
+                <img src="Images/download.png" 
+                     alt="Canada Lands Company" 
+                     class="logo-hover" 
+                     tabindex="0"> <!-- Clickable logo -->
+            </div>
+            <p>©2040 Naawi-Oodena. All rights reserved</p> <!-- Fixed typo -->
+        </div>
+        
+        <!-- Source links  -->
+        <p>Link to my sources</p>
+        <a href="https://treaty1.ca/" tabindex="0">Treaty 1</a>
+        <a href="https://www.clc-sic.ca/" tabindex="0">Canada Lands</a>
+        <a href="https://www.clc-sic.ca/" tabindex="0">Master Pdf</a>
+    </footer>
+</body>
+</html>
